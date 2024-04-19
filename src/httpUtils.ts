@@ -24,7 +24,7 @@ export async function postWithXForm(url: string, request: TTokenRequest): Promis
 }
 
 export async function postWithQuery(url: string, request: TTokenRequest): Promise<Response> {
-  return fetch(`${url}?{buildUrlEncodedRequest(request)}`, {
+  return fetch(`${url}?${buildUrlEncodedRequest(request)}`, {
     method: 'POST',
   }).then(async (response: Response) => {
     if (!response.ok) {
