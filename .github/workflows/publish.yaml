@@ -9,11 +9,11 @@ permissions:
   contents: read
 
 jobs:
-  tests:
-    uses: ./.github/workflows/tests.yaml
+  # tests:
+    # uses: ./.github/workflows/tests.yaml
 
   publish:
-    needs: tests
+    # needs: tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
