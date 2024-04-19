@@ -32,7 +32,13 @@ test('make token request with extra parameters', async () => {
   )
 
   await waitFor(() =>
-    expect(fetch).toHaveBeenCalledWith('myTokenEndpoint?grant_type=authorization_code&code=1234&client_id=anotherClientId&redirect_uri=http%3A%2F%2Flocalhost%2F&code_verifier=arandomstring&testTokenKey=tokenValue', {
+    expect(fetch).toHaveBeenCalledWith('myTokenEndpoint' +
+                                       '?grant_type=authorization_code' +
+                                       '&code=1234' +
+                                       '&client_id=anotherClientId' + 
+                                       '&redirect_uri=http%3A%2F%2Flocalhost%2F' +
+                                       '&code_verifier=arandomstring' +
+                                       '&testTokenKey=tokenValue', {
       method: 'POST',
     })
   )
