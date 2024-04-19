@@ -1,5 +1,5 @@
 {
-  "name": "react-oauth2-code-pkce",
+  "name": "@ykedare/react-oauth2-code-pkce",
   "version": "1.18.0",
   "description": "Provider agnostic react package for OAuth2 Authorization Code flow with PKCE",
   "main": "dist/index.js",
@@ -36,9 +36,9 @@
   "author": "Stig Oskar Ofstad",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/soofstad/react-oauth2-pkce/issues"
+    "url": "https://github.com/yateenkedare/react-oauth2-pkce/issues"
   },
-  "homepage": "https://github.com/soofstad/react-oauth2-pkce#readme",
+  "homepage": "https://github.com/yateenkedare/react-oauth2-pkce#readme",
   "files": [
     "dist/"
   ]
