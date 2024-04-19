@@ -5,6 +5,10 @@ React package for OAuth2 Authorization Code flow with PKCE
 
 Adhering to the RFCs recommendations, cryptographically sound, and with __zero__ dependencies!  
 
+## Difference between this FORKed repo and Original repo
+Original repo makes the token endpoint call using `application/x-www-form-urlencoded`.  
+This repo makes the same call but with data added to the query params instead.
+
 ## What is OAuth2 Authorization Code Flow with Proof Key for Code Exchange?
 
 Short version;  
