@@ -24,6 +24,6 @@ jobs:
       - run: yarn install
       - run: cd src && tsc
       - run: cp ./README.md ./src/README.md
-      - run: cd src && npm publish
+      - run: cd src && npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
