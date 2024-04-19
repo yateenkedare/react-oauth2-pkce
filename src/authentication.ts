@@ -6,7 +6,7 @@ import {
   TTokenRequestWithCodeAndVerifier,
   TTokenResponse,
 } from './Types'
-import { postWithXForm } from './httpUtils'
+import { postWithQuery } from './httpUtils'
 import { generateCodeChallenge, generateRandomString } from './pkceUtils'
 
 const codeVerifierStorageKey = 'PKCE_code_verifier'
@@ -58,7 +58,7 @@ function isTokenResponse(body: unknown | TTokenResponse): body is TTokenResponse
 }
 
 function postTokenRequest(tokenEndpoint: string, tokenRequest: TTokenRequest): Promise<TTokenResponse> {
-  return postWithXForm(tokenEndpoint, tokenRequest).then((response) => {
+  return postWithQuery(tokenEndpoint, tokenRequest).then((response) => {
     return response.json().then((body: TTokenResponse | unknown): TTokenResponse => {
       if (isTokenResponse(body)) {
         return body
